@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThanksTeacher</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/draw.css">
+
+    <!-- GSAP -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+    <script defer src="../js/draw.js"></script>
+</head>
+<body>
+<header>
+    <nav class="inner">
+        <h1 class="logo">
+            <a href="../index.html">forTeacher</a>
+        </h1>
+        <ul class="menu">
+            <li class="item">
+                <div class="item__name">선생님을 위한 기능</div>
+                <div class="item__contents">
+                    <ul>
+                        <li><a href="./draw/">흥미진진 번호 뽑기</a></li>
+                        <li><a href="javascript:void(0)">두근두근 자리 배정</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="item"><a href="javascript:void(0)" class="item__name">페들렛 주소 모음</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="eventview">
+    <div class="inner">
+        <div class="eventbox">
+            <div class="motionbox">
+                <div class="ball"></div>
+                <div class="shadow"></div>
+            </div>
+            <div class="controlbox">
+                <div class="btn" id="drawBtn">뽑기</div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
