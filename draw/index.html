@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThanksTeacher</title>
+    <title>ForTeacher</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,8 @@
     <!-- GSAP -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <!-- LODASH -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script defer src="../js/draw.js"></script>
 </head>
@@ -43,12 +45,26 @@
 <section class="eventview">
     <div class="inner">
         <div class="eventbox">
+            <div class="resetbox">
+                <span class="material-icons" id="resetBtn">refresh</span>
+                <div class="refresh tooltip">여태까지 나온 수를 리셋 시켜줍니다.</div>
+            </div>
             <div class="motionbox">
                 <div class="ball"></div>
                 <div class="shadow"></div>
             </div>
-            <div class="controlbox">
-                <div class="btn" id="drawBtn">뽑기</div>
+            <form class="controlbox">
+                <div class="overlapCheck">
+                    <h4>중복 :</h4> <input type="checkbox" name="" id="olCheck" >
+                </div>
+                <button class="btn" id="drawBtn" type="button">뽑기</button>
+                <div class="rangeSelector">
+                    <h4>범위 :</h4>
+                    <input type="number" class="to-from" id="from" value="1">
+                    ~
+                    <input type="number" class="to-from" id="to" value="30">
+                </div>
+                </form>
             </div>
         </div>
     </div>
