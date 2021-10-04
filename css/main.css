@@ -1,115 +1,7 @@
-/* COMMON */
-body {
-    font-size: 14px;
-    font-weight: 500;
-    font-family: 'Noto Sans KR', sans-serif;
+body.stoped {
+    overflow: hidden;
 }
-.inner {
-    width: 1100px;
-    position: relative;
-    margin: 0 auto;
-}
-a {
-    text-decoration: none;
-}
-.btn {
-    width: 130px;
-    padding: 10px;
-    border: 2px solid #333;
-    border-radius: 4px;
-    color: #333;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    cursor: pointer;
-    box-sizing: border-box;
-    display: block;
-    transition: .4s;
-}
-.btn:hover {
-    background-color: #333;
-    color: #fff;
-}
-
-/* HEADER */
-header {
-    width: 100%;
-    background-color: #000;
-    color: #fff;
-    border-bottom: 1px solid lightgray;
-    box-sizing: border-box;
-    font-size: 18px;
-}
-header .inner {
-    height: 70px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 50%;
-    z-index: 1;
-    
-}
-header .inner .logo {
-    transition: .2s;
-}
-header .inner h1:hover {
-    transform: scale(1.2);
-}
-header .inner .logo a {
-    font-size: 40px;
-    font-weight: 700;
-    font-family: 'Amatic SC', cursive;
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-}
-header .menu {
-    position: absolute;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-}
-header .menu .item .item__name {
-    color: white;
-    text-decoration: none;
-    /* margin-left: 30px; */
-    padding: 30px;
-    transition: opacity .2s;
-}
-header .menu .item .item__name:hover {
-    cursor: pointer;
-    opacity: .5;
-}
-header .menu .item .item__contents {
-    display: block;
-    position: absolute;
-    top: 65px;
-    left: 20px;
-    opacity: 0;
-    transition:opacity .2s;
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, .3);
-}
-header .menu .item:hover .item__contents{
-    opacity: 1;
-}
-header .menu .item .item__contents ul {
-    background-color: #000;
-    display: flex;
-    flex-direction: column;
-}
-header .menu .item .item__contents ul li {
-    font-size: 14px;
-    padding: 10px 30px 10px 10px ;
-}
-header .menu .item .item__contents ul li a {
-    color: white;
-    transition: .2s;
-}
-header .menu .item .item__contents ul li a:hover {
-    opacity: .5;
-    cursor: pointer;
-}
+/* WHAT */
 .what {
     width: 100%;
 }
@@ -118,26 +10,61 @@ header .menu .item .item__contents ul li a:hover {
     display: flex;
     justify-content: center;
 }
-.what .inner .titl-descr {
+.what .inner .view {
     /* background: chartreuse; */
+    width: 100%;
     border: solid 1px lightgray;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 15px;
-    padding: 50px 100px;
+    padding: 70px 100px;
 }
-.what .inner .titl-descr .descr h2{
+.what .inner .view .descr h2{
     color: black;
     font-size: 50px;
     margin-bottom: 25px;
 }
-.what .inner .titl-descr .descr p {
+.what .inner .view .descr p {
     color: black;
     font-size: 25px;
     line-height: 2rem;
     margin-bottom: 15px;
 }
-.what .inner .titl-descr .descr .btn {
+.what .inner .view .descr .btn {
     width: 150px;
+}
+/* Info-Draw */
+.info-draw {
+    width: 100%;
+}
+.info-draw .inner {
+
+}
+.info-draw .inner .view {
+    border: solid 1px lightgray;
+    margin: 15px;
+    padding: 50px 100px;
+}
+.info-draw .inner .view h3 {
+    color: black;
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+.info-draw .inner .view .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.info-draw .inner .view .info img {
+    width: 100%;
+    height: 100%;
+}
+.info-draw .inner .view p {
+    margin-top: 5px;
+    color: black;
+    font-size: 25px;
+    line-height: 2rem;
+    margin-bottom: 15px;
 }
