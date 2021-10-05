@@ -1,0 +1,14 @@
+.eventview .inner .eventbox {
+    margin: 15px;
+    border: solid 1px lightgray;
+}
+.eventview .inner .controlbox {
+    position: relative;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eventview .inner .controlbox input {
+    margin-right: 15px;
+}
