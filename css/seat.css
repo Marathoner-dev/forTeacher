@@ -1,8 +1,26 @@
 .eventview .inner .eventbox {
     margin: 15px;
+    border: solid 1px gray;
+}
+.eventview .inner .eventbox #tablebox {
+    display: flex;
+    justify-content: center;
+}
+.eventview .inner .eventbox #tablebox table {
+    width: 100%;
+}
+.eventview .inner .eventbox #tablebox table tr {
     border: solid 1px lightgray;
+    border-collapse: separate;
+}
+.eventview .inner .eventbox #tablebox table tr td {
+    border: solid 1px lightgray;
+    border-collapse: separate;
+    height: 70px;
 }
 .eventview .inner .controlbox {
+    border-top: solid 1px gray;
+    border-collapse: separate;
     position: relative;
     height: 70px;
     display: flex;
@@ -10,5 +28,6 @@
     align-items: center;
 }
 .eventview .inner .controlbox input {
-    margin-right: 15px;
+    margin: 0 15px;
+    width: 30px;
 }
