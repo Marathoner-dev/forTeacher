@@ -8,19 +8,6 @@
     margin: 5px 0px 0px 5px;
     transition: .4s;
 }
-.eventview .inner .eventbox .tooltip {
-    visibility: hidden;      
-    font-size: 12px;
-    margin-left: 5px;             
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 5px;
-    position: absolute;
-    z-index: 1;
-    transition: .2s;
-}
 .eventview .inner .eventbox .resetbox:hover .tooltip {
     visibility: visible;
 }

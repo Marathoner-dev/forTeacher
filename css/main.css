@@ -35,36 +35,52 @@ body.stoped {
     width: 150px;
 }
 /* Info-Draw */
-.info-draw {
+.info {
     width: 100%;
 }
-.info-draw .inner {
+.info .inner {
 
 }
-.info-draw .inner .view {
+.info .inner .view {
     border: solid 1px lightgray;
     margin: 15px;
     padding: 50px 100px;
 }
-.info-draw .inner .view h3 {
+.info .inner .view h3 {
     color: black;
     font-size: 45px;
     margin-bottom: 25px;
 }
-.info-draw .inner .view .info {
+.info .inner .view .main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.info-draw .inner .view .info img {
+.info .inner .view .main img {
     width: 100%;
     height: 100%;
 }
-.info-draw .inner .view p {
+.info .inner .view p {
     margin-top: 5px;
     color: black;
     font-size: 25px;
     line-height: 2rem;
     margin-bottom: 15px;
+}
+/* FOOTER */
+footer {
+    background-color: rgba(187, 187, 187, 0.1);
+}
+footer .inner {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+    padding: 10px 0 10px 0;
+}
+footer .inner .main {
+    color: rgb(20, 20, 20);
+}
+footer .inner .main span {
+    margin: 0 15px;
 }
