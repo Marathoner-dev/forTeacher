@@ -36,6 +36,14 @@
     background: khaki;
     border-collapse: separate;
 }
+.eventview .inner .eventbox #tablebox table tr td.enter,
+.eventview .inner .eventbox #tablebox table tr td.noUse.enter {
+    background-color: cadetblue;
+}
+.eventview .inner .eventbox #tablebox table tr td.draging,
+.eventview .inner .eventbox #tablebox table tr td.noUse.draging {
+    background-color: rgb(137, 192, 194);
+}
 .eventview .inner .controlbox {
     border-top: solid 1px gray;
     border-collapse: separate;

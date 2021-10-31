@@ -24,12 +24,23 @@ function makeTable (col, row){
     for (let j = 0; j < row; j++) {
       let tdEls = trEls.appendChild(document.createElement('td'));
       tdEls.className = 'use'
+      tdEls.setAttribute('draggable', 'true')
       tdEls.addEventListener('click', () => {
         if (tdEls.classList.contains('use')) {
           tdEls.classList.replace('use', 'noUse')
         } else {
           tdEls.classList.replace('noUse', 'use')
         }
+      })
+      tdEls.addEventListener('drag', (event) => {
+        event.preventDefault();
+        tdEls.classList.add('draging')
+      })
+      tdEls.addEventListener('dragenter', () => {
+        tdEls.classList.add('enter')
+      })
+      tdEls.addEventListener('dragleave', () => {
+        tdEls.classList.remove('enter')
       })
     }
   }
