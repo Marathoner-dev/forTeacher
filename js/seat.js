@@ -42,6 +42,9 @@ function makeTable (col, row){
       tdEls.addEventListener('dragleave', () => {
         tdEls.classList.remove('enter')
       })
+      tdEls.addEventListener('dragend', () => {
+        tdEls.classList.remove('draging')
+      })
     }
   }
 }
