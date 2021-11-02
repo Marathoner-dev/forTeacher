@@ -14,7 +14,8 @@ function selectNum (cnt){
   return pickNum
 };
 
-
+let dragNum;
+let dragEl;
 function makeTable (col, row){
   const tableChild = document.getElementById("tablebox").appendChild(document.createElement("table"));
   tableChild.id = 'seatTable'
@@ -32,12 +33,20 @@ function makeTable (col, row){
           tdEls.classList.replace('noUse', 'use')
         }
       })
-      tdEls.addEventListener('drag', (event) => {
-        event.preventDefault();
+      // dragAndDrop(tdEls)
+      tdEls.addEventListener('drag', () => {
         tdEls.classList.add('draging')
+        dragEl = tdEls;
+      })
+      tdEls.addEventListener('dragstart', () => {
+        dragNum = tdEls.textContent
+        console.log(dragNum)
       })
       tdEls.addEventListener('dragenter', () => {
         tdEls.classList.add('enter')
+      })
+      tdEls.addEventListener('dragover', (e) => {
+        e.preventDefault();
       })
       tdEls.addEventListener('dragleave', () => {
         tdEls.classList.remove('enter')
@@ -45,10 +54,17 @@ function makeTable (col, row){
       tdEls.addEventListener('dragend', () => {
         tdEls.classList.remove('draging')
       })
+      tdEls.addEventListener('drop', (e) => {
+        tdEls.classList.remove('enter')
+        dragEl.textContent = tdEls.textContent;
+        tdEls.textContent = dragNum;
+
+        console.log(dragNum)
+        console.log(e.textContent)
+      })
     }
   }
 }
-
 
 function pushNum () {
   let noUseCnt = document.querySelectorAll('.noUse').length
@@ -62,6 +78,8 @@ function pushNum () {
         if (childInTr[j].tagName = 'td' && !childInTr[j].classList.contains('noUse')){
         console.log(childInTr)
         childInTr[j].append(selectNum(numMax));
+      } else {
+        childInTr[j].classList.remove('noUse')
       }
     }
     console.log(numMax)
