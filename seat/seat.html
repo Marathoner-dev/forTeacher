@@ -1,62 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     <title>자리 뽑기</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Noto+Sans+KR:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/seat.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Noto+Sans+KR:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/seat.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1N8ZYC6TMY"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-1N8ZYC6TMY");
+    </script>
 
     <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js" integrity="sha512-1OG9UO4krPizjtz/c9iDbjCqtXznBYdJeD4ccPaYfJHzC6F1qoQ3P1bgQ3J8lgCoK5qGVCqsY4+/RKjLDzITVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"
+      integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js"
+      integrity="sha512-1OG9UO4krPizjtz/c9iDbjCqtXznBYdJeD4ccPaYfJHzC6F1qoQ3P1bgQ3J8lgCoK5qGVCqsY4+/RKjLDzITVQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- LODASH -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <script defer src="../js/seat.js"></script>
- 
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="inner">
-            <h1 class="logo">
-                <a href="../index.html">forTeacher</a>
-            </h1>
-            <ul class="menu">
-                <li class="item">
-                    <div class="item__name">선생님을 위한 기능</div>
-                    <div class="item__contents">
-                        <ul>
-                            <li><a href="/draw/draw.html">흥미진진 번호 뽑기</a></li>
-                            <li><a href="/seat/seat.html">두근두근 자리 배정</a></li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </nav>
+      <nav class="inner">
+        <h1 class="logo">
+          <a href="../index.html">forTeacher</a>
+        </h1>
+        <ul class="menu">
+          <li class="item">
+            <div class="item__name">선생님을 위한 기능</div>
+            <div class="item__contents">
+              <ul>
+                <li><a href="/draw/draw.html">흥미진진 번호 뽑기</a></li>
+                <li><a href="/seat/seat.html">두근두근 자리 배정</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
     <section class="eventview">
-        <div class="inner">
-            <div class="eventbox">
-                <div class="blackboard">칠판</div>
-                <div id="tablebox">
-                </div>
-                <div class="controlbox" id="ctrBox">
-                    가로(row) : <input type="number" id="inputRow">
-                    세로(col) : <input type="number" id="inputCol">
-                    <div class="btn" id="setBtn" >배치도 생성</div>
-                </div>
-            </div>
+      <div class="inner">
+        <div class="eventbox">
+          <div class="blackboard">칠판</div>
+          <div id="tablebox"></div>
+          <div class="controlbox" id="ctrBox">
+            가로(row) : <input type="number" id="inputRow" /> 세로(col) :
+            <input type="number" id="inputCol" />
+            <div class="btn" id="setBtn">배치도 생성</div>
+          </div>
         </div>
+      </div>
     </section>
-
-</body>
+  </body>
+</html>
