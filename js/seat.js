@@ -110,11 +110,13 @@ function makePushBtn() {
 }
 
 setBtn.addEventListener("click", () => {
-  alert("칸을 클릭하여 해당 칸을 미사용 칸으로 지정할 수 있습니다.");
   document.getElementById("tablebox").innerHTML = "";
   let rowCnt = document.getElementById("inputRow").value;
   let colCnt = document.getElementById("inputCol").value;
-  if (!document.getElementById("pushBtn")) {
+  if (rowCnt || colCnt < 0) {
+    alert("입력하신 값에 음수가 포함되었습니다.");
+  } else if (!document.getElementById("pushBtn")) {
+    alert("칸을 클릭하여 해당 칸을 미사용 칸으로 지정할 수 있습니다.");
     makePushBtn();
   }
   makeTable(colCnt, rowCnt);
