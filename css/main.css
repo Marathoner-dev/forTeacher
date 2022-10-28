@@ -1,86 +1,82 @@
-body.stoped {
-    overflow: hidden;
-}
 /* WHAT */
 .what {
-    width: 100%;
+  width: 100%;
 }
 .what .inner {
-    /* background: wheat; */
-    display: flex;
-    justify-content: center;
+  /* background: wheat; */
+  display: flex;
+  justify-content: center;
 }
 .what .inner .view {
-    /* background: chartreuse; */
-    width: 100%;
-    border: solid 1px lightgray;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 15px;
-    padding: 70px 100px;
+  /* background: chartreuse; */
+  width: 100%;
+  border: solid 1px lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 70px 100px;
 }
-.what .inner .view .descr h2{
-    color: black;
-    font-size: 50px;
-    margin-bottom: 25px;
+.what .inner .view .descr h2 {
+  color: black;
+  font-size: 50px;
+  margin-bottom: 25px;
 }
 .what .inner .view .descr p {
-    color: black;
-    font-size: 25px;
-    line-height: 2rem;
-    margin-bottom: 15px;
+  color: black;
+  font-size: 25px;
+  line-height: 2rem;
+  margin-bottom: 15px;
 }
 .what .inner .view .descr .btn {
-    width: 150px;
+  width: 150px;
 }
 /* Info-Draw */
 .info {
-    width: 100%;
+  width: 100%;
 }
 .info .inner {
-
 }
 .info .inner .view {
-    border: solid 1px lightgray;
-    margin: 15px;
-    padding: 50px 100px;
+  border: solid 1px lightgray;
+  margin: 15px;
+  padding: 50px 100px;
 }
 .info .inner .view h3 {
-    color: black;
-    font-size: 45px;
-    margin-bottom: 25px;
+  color: black;
+  font-size: 45px;
+  margin-bottom: 25px;
 }
 .info .inner .view .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .info .inner .view .main img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .info .inner .view p {
-    margin-top: 5px;
-    color: black;
-    font-size: 25px;
-    line-height: 2rem;
-    margin-bottom: 15px;
+  margin-top: 5px;
+  color: black;
+  font-size: 25px;
+  line-height: 2rem;
+  margin-bottom: 15px;
 }
 /* FOOTER */
 footer {
-    background-color: rgba(187, 187, 187, 0.1);
+  background-color: rgba(187, 187, 187, 0.1);
 }
 footer .inner {
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
-    padding: 10px 0 10px 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  padding: 10px 0 10px 0;
 }
 footer .inner .main {
-    color: rgb(20, 20, 20);
+  color: rgb(20, 20, 20);
 }
 footer .inner .main span {
-    margin: 0 15px;
+  margin: 0 15px;
 }

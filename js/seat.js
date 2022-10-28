@@ -93,31 +93,33 @@ function pushNum() {
 }
 
 function makePushBtn() {
-  const pushBtn = document
-    .getElementById("ctrBox")
-    .appendChild(document.createElement("div"));
-  pushBtn.append("자리 배치");
-  pushBtn.className = "btn";
-  pushBtn.id = "pushBtn";
-  pushBtn.addEventListener("click", () => {
-    const tds = document.querySelectorAll("td");
-    for (let i = 0; i < tds.length; i++) {
-      tds[i].innerHTML = "";
-    }
-    pickedNums = [];
-    pushNum();
-  });
+  if (!document.getElementById("pushBtn")) {
+    const pushBtn = document
+      .getElementById("ctrBox")
+      .appendChild(document.createElement("div"));
+    pushBtn.append("자리 배치");
+    pushBtn.className = "btn";
+    pushBtn.id = "pushBtn";
+    pushBtn.addEventListener("click", () => {
+      const tds = document.querySelectorAll("td");
+      for (let i = 0; i < tds.length; i++) {
+        tds[i].innerHTML = "";
+      }
+      pickedNums = [];
+      pushNum();
+    });
+  }
 }
 
 setBtn.addEventListener("click", () => {
   document.getElementById("tablebox").innerHTML = "";
   let rowCnt = document.getElementById("inputRow").value;
   let colCnt = document.getElementById("inputCol").value;
-  if (rowCnt || colCnt < 0) {
-    alert("입력하신 값에 음수가 포함되었습니다.");
-  } else if (!document.getElementById("pushBtn")) {
+  if (rowCnt && colCnt > 0) {
     alert("칸을 클릭하여 해당 칸을 미사용 칸으로 지정할 수 있습니다.");
     makePushBtn();
+  } else {
+    alert("입력하신 값에 음수가 포함되어 있습니다.");
   }
   makeTable(colCnt, rowCnt);
 });
