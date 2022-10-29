@@ -103,8 +103,20 @@
           <div class="blackboard">칠판</div>
           <div id="tablebox"></div>
           <div class="controlbox" id="ctrBox">
-            가로(row) : <input type="number" id="inputRow" /> 세로(col) :
-            <input type="number" id="inputCol" />
+            가로(row) :
+            <input
+              type="number"
+              id="inputRow"
+              min="0"
+              oninput="this.value = Math.abs(this.value)"
+            />
+            세로(col) :
+            <input
+              type="number"
+              id="inputCol"
+              min="0"
+              oninput="this.value = Math.abs(this.value)"
+            />
             <div class="btn" id="setBtn">배치도 생성</div>
           </div>
           <script

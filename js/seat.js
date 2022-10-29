@@ -16,12 +16,12 @@ function selectNum(cnt) {
 
 let dragNum;
 let dragEl;
+// 배치도 생성
 function makeTable(col, row) {
-  const tableChild = document
-    .getElementById("tablebox")
-    .appendChild(document.createElement("table"));
+  tableBoxEl.innerHTML = "";
+  const tableChild = tableBoxEl.appendChild(document.createElement("table"));
   tableChild.id = "seatTable";
-  // const numMax = col*row ;
+  // const maxNum = col(세로) * row(가로) - noUseCnt(미사용 칸의 갯수) ;
   for (let i = 0; i < col; i++) {
     let trEls = tableChild.appendChild(document.createElement("tr"));
     for (let j = 0; j < row; j++) {
@@ -68,27 +68,36 @@ function makeTable(col, row) {
   }
 }
 
+// 자리배치 (배치도에 번호 할당)
 function pushNum() {
   let noUseCnt = document.querySelectorAll(".noUse").length;
-  const numMax =
-    document.getElementById("inputRow").value *
-      document.getElementById("inputCol").value -
-    noUseCnt;
-  const seatTable = document.getElementById("seatTable");
-  const childInTable = seatTable.childNodes;
-  for (let i = 0; i < childInTable.length; i++) {
-    console.log(childInTable);
-    let childInTr = childInTable[i].childNodes;
-    for (let j = 0; j < childInTr.length; j++) {
-      if (
-        (childInTr[j].tagName =
-          "td" && !childInTr[j].classList.contains("noUse"))
-      ) {
-        console.log(childInTr);
-        childInTr[j].append(selectNum(numMax));
+  const nowRow = document.getElementById("inputRow").value;
+  const nowCol = document.getElementById("inputCol").value;
+  const seatTable = tableBoxEl.firstChild;
+  if (
+    nowCol == seatTable.children.length &&
+    nowRow == seatTable.firstChild.children.length
+  ) {
+    const maxNum = nowCol * nowRow - noUseCnt;
+    const seatTable = document.getElementById("seatTable");
+    const childInTable = seatTable.childNodes;
+    for (let i = 0; i < childInTable.length; i++) {
+      console.log(childInTable);
+      let childInTr = childInTable[i].childNodes;
+      for (let j = 0; j < childInTr.length; j++) {
+        if (
+          (childInTr[j].tagName =
+            "td" && !childInTr[j].classList.contains("noUse"))
+        ) {
+          console.log(childInTr);
+          childInTr[j].append(selectNum(maxNum));
+        }
       }
+      console.log(maxNum);
     }
-    console.log(numMax);
+  } else {
+    alert("입력하신 값이 변경되어, 배치도를 다시 생성합니다.");
+    makeTable(nowCol, nowRow);
   }
 }
 
@@ -112,14 +121,9 @@ function makePushBtn() {
 }
 
 setBtn.addEventListener("click", () => {
-  document.getElementById("tablebox").innerHTML = "";
   let rowCnt = document.getElementById("inputRow").value;
   let colCnt = document.getElementById("inputCol").value;
-  if (rowCnt && colCnt > 0) {
-    alert("칸을 클릭하여 해당 칸을 미사용 칸으로 지정할 수 있습니다.");
-    makePushBtn();
-  } else {
-    alert("입력하신 값에 음수가 포함되어 있습니다.");
-  }
+  alert("칸을 클릭하여 해당 칸을 미사용 칸으로 지정할 수 있습니다.");
+  makePushBtn();
   makeTable(colCnt, rowCnt);
 });
