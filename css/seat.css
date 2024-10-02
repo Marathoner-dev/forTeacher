@@ -61,3 +61,10 @@
 .eventview .inner .controlbox .btn {
   margin: 0 15px;
 }
+
+.describebox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ff4858;
+}

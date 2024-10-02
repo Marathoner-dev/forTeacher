@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   <head>
     <!-- Google Tag Manager -->
@@ -123,8 +123,8 @@
     <section class="eventview">
       <div class="inner">
         <div class="eventbox">
-          <div class="blackboard">칠판</div>
           <div id="tablebox"></div>
+          <div class="blackboard">칠판</div>
           <div class="controlbox" id="ctrBox">
             가로(row) :
             <input
@@ -140,6 +140,8 @@
               min="0"
               oninput="this.value = Math.abs(this.value)"
             />
+            명단(names) :
+            <input type="text" id="namesInput" placeholder="" />
             <div class="btn" id="setBtn">배치도 생성</div>
           </div>
           <script
@@ -150,5 +152,8 @@
         </div>
       </div>
     </section>
+    <div class="describebox">
+      * 명단에는 ' ' 로 이름을 구분하여 번호 순서대로 입력해주세요. *
+    </div>
   </body>
 </html>
